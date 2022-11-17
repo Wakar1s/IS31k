@@ -19,4 +19,4 @@ try:
         print('x2 = ' + str(x2))
 
 except ZeroDivisionError:
-    print('Деление на ноль, неразрешимое уравнение')
+    print('Неразрешимое уравнение')
