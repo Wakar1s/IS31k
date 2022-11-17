@@ -5,7 +5,7 @@ square = {'A': 11, 'B': 12, 'C': 13, 'D': 14, 'E': 15,
           'V': 51, 'W': 52, 'X': 53, 'Y': 54, 'Z': 55,
 }
 
-n = input().upper()
+# n = input().upper()
 m = input().upper()
 
 
@@ -18,6 +18,7 @@ def getNum(n):
             mess += str(square.get(i, 0))
         elif i not in square:
             print('Введите корректные данные')
+            break
         else:
             mess += (i + i)
     return mess
@@ -48,6 +49,6 @@ def getStr(n):
         return ss
 
 
-print(getNum(n))
+# print(getNum(n))
 print(getStr(m))
 
