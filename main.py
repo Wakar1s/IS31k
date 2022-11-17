@@ -18,6 +18,7 @@ elif D == 0:
     try:
         x1 = -c / b
         print(f"Есть один корень: {x1}")
+        raise SystemExit
     except ZeroDivisionError:
         print("Неразрешимое уравнение")
         raise SystemExit
