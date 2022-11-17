@@ -1,14 +1,44 @@
-from FirstRandom import CustomRandom as FirstPositive
-from SecondRandom import CustomRandom as SecondNegative
+#второе и третье задание
+import math
 
-if __name__ == "__main__":
-    print("1. Случайное целое положительное число от 0 до 100")
-    print("2. Случайное целое отрицательное число от 0 до 100")
-    v = input("Введите вариант генерации случайного числа: ")
-    match v.split():
-        case ['1']:
-            print(FirstPositive.positiveRandom())
-        case ['2']:
-            print(SecondNegative.negativeRandom())
-        case _:
-            print("Нет такого функционала")
+try:
+    a, b, c = map(int, input("Введите A, B, C: ").split())
+except ValueError:
+    print("Вы возможно ввели буквы или какую-нибудь другую ерунду, пишите цифры!")
+
+#a = int(input('Введите А: '))
+#b = int(input('Введите B: '))
+#c = int(input('Введите C: '))
+
+D = b * b - (4 * a * c)
+if D < 0:
+    print("Случай комплексных корней.")
+    raise SystemExit
+elif D == 0:
+    try:
+        x1 = -c / b
+        print(f"Есть один корень: {x1}")
+    except ZeroDivisionError:
+        print("Неразрешимое уравнение")
+        raise SystemExit
+else:
+    try:
+        x1 = (-b + math.sqrt(D)) / (2 * a)
+    except ZeroDivisionError:
+        print("Неквадратное уравнение")
+        raise SystemExit
+
+    try:
+        x2 = (-b - math.sqrt(D)) / (2 * a)
+    except ZeroDivisionError:
+        print("1")
+        raise SystemExit
+
+x1 = (-b + math.sqrt(D)) / (2 * a)
+x2 = (-b - math.sqrt(D)) / (2 * a)
+"""if x1 <= 0 and x2 <= 0:
+    print("0")
+elif x2 <= 0:
+    print("0")
+"""
+print(f"Есть два корня: \nx1 = {int(x1)} \nx2 = {int(x2)}")
