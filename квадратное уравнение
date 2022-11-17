@@ -24,4 +24,7 @@ begin
     else if D < 0 then writeln('случай комплексных корней')
     else if x1 = 0 then writeln('нулевой корень')
     else if x2 = 0 then writeln('нулевой корень')
+    else if a = 0 then writeln('неквадратное уравнение')
+    else if b = 0 then writeln('неквадратное уравнение')
+    else if c = 0 then writeln('неквадратное уравнение')
 end.
