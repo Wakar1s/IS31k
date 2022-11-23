@@ -19,7 +19,11 @@ a = float(input())
 b = float(input())
 c = float(input())
 
-if a == 0 and b == 0 and c == 0:
-    print('Решения нет, так как уравнение линейное')
+if a == 0 and b == 0:
+    print('Нерешимое уравнение')
+elif a == 0:
+    print('Неквадратное уравнение')
+elif b == 0 and c == 0:
+    print('Нуленвые корни')
 else:
     equation(a, b, c)
