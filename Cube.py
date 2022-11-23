@@ -5,9 +5,6 @@ square = {'A': 11, 'B': 12, 'C': 13, 'D': 14, 'E': 15,
           'V': 51, 'W': 52, 'X': 53, 'Y': 54, 'Z': 55,
 }
 
-n = input('Text\n').upper()
-m = input('int\n').upper()
-
 def getNum(n):
     mess = ''
     l_mess = list(n)
@@ -45,6 +42,8 @@ def getStr(n):
                 ss += i[0:1]
         return ss
 
-
+n = input('Text\n').upper()
 print(getNum(n))
+
+m = input('int\n').upper()
 print(getStr(m))
